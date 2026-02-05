@@ -34,7 +34,7 @@ const StepOne = forwardRef(({ formData, setFormData }: Props, ref) => {
 
     setErrors(newErrors);
 
-    return Object.keys(newErrors).length === 0; // true if valid
+    return Object.keys(newErrors).length === 0; 
   };
 
   useImperativeHandle(ref, () => ({
@@ -110,6 +110,6 @@ const StepOne = forwardRef(({ formData, setFormData }: Props, ref) => {
 
 export default StepOne;
 
-     {/* VENUE (OPTIONAL) */}
+    
       
 

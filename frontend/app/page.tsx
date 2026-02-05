@@ -10,7 +10,7 @@ import { FormDataType } from "@/types/formTypes";
 export default function Home() {
   const [step, setStep] = useState<number>(1);
 
-  
+  const [submitted, setSubmitted] = useState(false);
   const stepOneRef = useRef<any>(null);
   const stepFourRef = useRef<any>(null);
 
@@ -34,16 +34,38 @@ export default function Home() {
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   const handleSubmit = async () => {
-    await fetch("http://localhost:5000/api/requirements", {
+    await fetch("https://event-form-1.onrender.com/api/requirements", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
-    alert("Submitted Successfully!");
+    setSubmitted(true);
   };
 
   const handleEdit = () => setStep(1);
+
+  if (submitted) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-100">
+      <div className="text-center space-y-4">
+        <h2 className="text-4xl font-light text-red-900">
+          Form Submitted Successfully !!
+        </h2>
+        <p className="text-gray-600">
+          We’ll get back to you soon.
+        </p>
+
+        <button
+          onClick={() => window.location.reload()}
+          className="px-6 py-2 bg-red-800 text-white rounded-lg hover:bg-red-900 transition"
+        >
+          Submit Another Form
+        </button>
+      </div>
+    </div>
+  );
+}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-100">

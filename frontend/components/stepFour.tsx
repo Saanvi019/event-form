@@ -38,7 +38,7 @@ const StepFour = forwardRef(({ formData, setFormData }: Props, ref) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  // expose validate to parent
+  
   useImperativeHandle(ref, () => ({
     validate: validateAll,
   }));
@@ -46,7 +46,7 @@ const StepFour = forwardRef(({ formData, setFormData }: Props, ref) => {
   return (
     <div className="space-y-5">
 
-      {/* NAME */}
+      
       <div>
         <label className={labelStyle}>Your Name</label>
         <input
@@ -63,7 +63,7 @@ const StepFour = forwardRef(({ formData, setFormData }: Props, ref) => {
         )}
       </div>
 
-      {/* EMAIL */}
+      
       <div>
         <label className={labelStyle}>Email Address</label>
         <input
@@ -81,7 +81,7 @@ const StepFour = forwardRef(({ formData, setFormData }: Props, ref) => {
         )}
       </div>
 
-      {/* PHONE */}
+     
       <div>
         <label className={labelStyle}>Phone Number</label>
         <input
@@ -99,7 +99,7 @@ const StepFour = forwardRef(({ formData, setFormData }: Props, ref) => {
         )}
       </div>
 
-      {/* NOTES */}
+     
       <div>
         <label className={labelStyle}>Additional Notes (Optional)</label>
         <textarea
