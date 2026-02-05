@@ -48,7 +48,7 @@ const StepOne = forwardRef(({ formData, setFormData }: Props, ref) => {
         <label className={labelStyle}>Event Name</label>
         <input
           className={errors.eventName ? errorStyle : inputStyle}
-          placeholder="Hotel / Hall / Home"
+          placeholder="e.g. Rahul & Priya Wedding Reception"
           value={formData.eventName}
           onChange={(e) =>
             setFormData({ ...formData, eventName: e.target.value })
@@ -83,7 +83,7 @@ const StepOne = forwardRef(({ formData, setFormData }: Props, ref) => {
         <label className={labelStyle}>Location</label>
         <input
           className={errors.location ? errorStyle : inputStyle}
-          placeholder="Hotel / Hall / Home"
+          placeholder="Mumbai/Punjab/Delhi"
           value={formData.location}
           onChange={(e) =>
             setFormData({ ...formData, location: e.target.value })
