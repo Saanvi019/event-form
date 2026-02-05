@@ -34,7 +34,7 @@ export default function Home() {
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1));
 
   const handleSubmit = async () => {
-    await fetch("http://localhost:5000/api/requirements", {
+    await fetch("https://event-form-1.onrender.com/api/requirements", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
