@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-100">
       <div className="text-center space-y-4">
-        <h2 className="text-4xl font-light text-red-900">
+        <h2 className="text-4xl font-light text-green-900">
           Form Submitted Successfully !!
         </h2>
         <p className="text-gray-600">
